@@ -1,0 +1,104 @@
+
+.content{
+    display: grid; /*utilizando a grid*/
+    grid-template-columns: 60% 40%; /*2 colunas e o tamanho de cada uma*/
+    grid-template-rows: 11.4rem 1fr; /*114px*/
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+#bg{
+   grid-area: left; 
+   
+   /* background-position-x: -10rem; inserindo a imagem de fundo*/
+   /* no-repeat = não repetir a imagem*/
+   /* top/containt = a imagem se alinha ao topo e se encaixa no tamanha da div */
+   /* top/cover = o cover tentaria preencher todo o espaço */
+   background: url('/images/home-bg-img.svg') no-repeat top/contain;
+   /* background-position-x: -10rem;*/
+   background-position-x:-10rem;
+   width: min(100.3rem);
+}
+
+main{
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    margin-top: -12rem;
+}
+
+/* */
+main .content{
+    width: min(50.3rem, 100%);
+}
+
+main h2{
+  font-family: 'Poppins', sans-serif; 
+  color: var(--black);
+  font-size: clamp(20px, 5vw, 1.8rem);
+  margin-bottom: 2.4rem;
+  
+}
+
+input{
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 1.8rem; /*espaço entre o input e o button */
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    margin: 4rem;
+
+}
+
+.separator div:nth-child(2){
+    color: var(--grey-blue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 1.35rem;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+    background: var(--grey-blue);
+    width: 100%;
+    height: 1px;
+
+}
+
+/*create balls*/
+
+.ball{
+    width: 21.2rem;
+    height: 21.2rem;
+    background: var(--blue);
+    clip-path: circle(50%);
+    position: fixed;
+    opacity: 0.1;
+}
+
+.ball.top{
+    top: -49rem;
+    width: 63.3rem;
+    right: -35rem;
+    height: 63.3rem
+    
+}
+
+.ball.botton{
+    bottom: -15rem;
+    right: -10rem;
+    
+}
+

@@ -1,0 +1,5 @@
+Comandos axecutados dentros da pasta do projeto 
+- npm init -y {para o node criar o projeto, criado arquivo jason dentro da pasta do projeto}
+- npm install ejs {}
+- npm install express {}
+- npm run start {}
